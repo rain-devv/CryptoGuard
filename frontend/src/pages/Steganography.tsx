@@ -493,7 +493,7 @@ const Steganography = () => {
 
                 <div className="flex gap-2">
                   <button
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate("/home")}
                     className="flex-1 bg-secondary text-secondary-foreground font-bold py-3 rounded-xl hover:opacity-80 transition-all border border-border flex items-center justify-center gap-2"
                   >
                     <Home className="w-4 h-4" />
