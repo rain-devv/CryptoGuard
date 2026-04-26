@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const links = [
-  { to: "/", label: "الرئيسية", icon: Home, public: true },
+  { to: "/home", label: "الرئيسية", icon: Home, public: true },
   { to: "/how-to-use", label: "كيفية الاستخدام", icon: BookOpen, public: true },
   { to: "/encrypt", label: "التشفير", icon: Lock, public: false },
   { to: "/steganography", label: "الإخفاء", icon: Eye, public: false },
@@ -54,7 +54,7 @@ const SiteHeader = () => {
   const [showAbout, setShowAbout] = useState(false);
 
   const visibleLinks = links.filter((link) => link.public || isLoggedIn);
-  const homeLink = visibleLinks.find((link) => link.to === "/");
+  const homeLink = visibleLinks.find((link) => link.to === "/home");
   const primaryLinks = visibleLinks.filter((link) =>
     ["/encrypt", "/steganography", "/decode"].includes(link.to)
   );
@@ -70,7 +70,7 @@ const SiteHeader = () => {
         <div className="w-full px-4 md:px-6">
           <div className="glass-surface my-4 flex w-full flex-col gap-4 rounded-2xl px-4 py-4 md:flex-row md:items-center md:justify-between">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/home")}
               className="flex items-center gap-3 text-right"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10">
@@ -158,7 +158,7 @@ const SiteHeader = () => {
                   <button
                     onClick={() => {
                       logout();
-                      navigate("/");
+                      navigate("/home");
                     }}
                     className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/10 px-4 py-2 text-sm text-destructive transition-all hover:bg-destructive/15"
                   >
