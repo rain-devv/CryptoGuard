@@ -839,7 +839,7 @@ const Decode = () => {
               {/* أزرار النهاية */}
               <div className="flex flex-col gap-2 pt-2">
                 <button
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/home")}
                   className="w-full bg-primary text-primary-foreground font-bold py-3.5 rounded-xl hover:opacity-90 transition-all glow-box flex items-center justify-center gap-2"
                 >
                   <Home className="w-5 h-5" />
